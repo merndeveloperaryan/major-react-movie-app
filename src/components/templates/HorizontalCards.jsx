@@ -7,7 +7,7 @@ const HorizontalCards = ({ data }) => {
     <div className="w-full flex overflow-x-auto gap-2 rounded px-4">
       {data.map((item, index) => (
         <Link
-          to={`/${item.media_type}/details/${item.id}`}
+          to={`/${item.media_type? item.media_type : 'movie' }/details/${item.id}`}
           key={index}
           className="min-w-[15%] rounded bg-black mb-5 pb-5"
         >
